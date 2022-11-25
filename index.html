@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Gallary</title>  
+
+
+    <!-- Custom CSS -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css">
+   <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+
+  
+
+</head>
+<body id="page-top" class="politics_version">
+
+   
+	
+	<div id="portfolio" class="section lb">
+		<div class="container">
+			<div class="section-title text-center">
+                <h3>Portfolio</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div><!-- end title -->
+			
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-center">
+						<button class="active" data-filter="*">All</button>
+						<button data-filter=".gal_a">Web Development</button>
+						<button data-filter=".gal_b">Creative Design</button>
+						<button data-filter=".gal_c">Graphic Design</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="gallery-list row">
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_img-01.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa-solid fa-image"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_img-02.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa-solid fa-image"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_img-03.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa-solid fa-image"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_img-04.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa-solid fa-image"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_img-05.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa-solid fa-image"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_img-06.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa-solid fa-image"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- ALL JS FILES -->
+<script src="js/all.js"></script>
+
+	<script>
+		(function($) {
+    "use strict";
+	// Gallery Filter
+        var Container = $('.container');
+        Container.imagesLoaded(function () {
+            var portfolio = $('.gallery-menu');
+            portfolio.on('click', 'button', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+            var $grid = $('.gallery-list').isotope({
+                itemSelector: '.gallery-grid'
+            });
+
+        });
+})(jQuery);
+	</script>
+
+</body>
+</html>
